@@ -16,6 +16,7 @@
   1. Prepare a Linux-based computer (as a NFS-server) and a Linux-based virtual machine (as a NFS-client) according with a necessary environment described above.  
   2. Download all the files from the project
   3. Paste them in one directory
+  4. Paste a necessary value to a server_IP variable in a conftest.py file
   4. In a directory with the project open a terminal. Run there "pytest ./test_1.py --clientIP="192.168.56.102" --clientPort="22" --clientName="bobs" --clientPassword="flylesenok" --log-file=/home/polina/fileWithLogs --clientIP="192.168.56.1"", where in --clientIP, --clientPort, --clientName, --clientPassword, --log-file write your values.
   
  <b>Additional information</b>:
@@ -23,5 +24,4 @@
  --clientPort - write down yours (of a Linux-based virtual machine (a NFS-client)) if specified, if not - write down 22 (it is a default);
  --clientName - means a user on a Linux-based virtual machine (a NFS-client), but not root;
  --clientPassword - means a password of a user on a Linux-based virtual machine (a NFS-client). 
- --clientIP - means an IP (vboxnet0) of a Linux-based computer (a NFS-server). There is a timeout (2 minutes) in the code after the main activity of each test fuction. It was made for the ability to check correctness of a test manually. During the timeout we can manually go to our virtual machine (a NFS-client) and check if a file is created or not, for example
  --log-file - means a file, where all logs will be stored
