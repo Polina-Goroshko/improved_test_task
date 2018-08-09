@@ -22,7 +22,8 @@ def parser_of_command_line(request):
     return request.config.getoption("--clientIP"), \
            request.config.getoption("--clientPort"), \
            request.config.getoption("--clientName"), \
-           request.config.getoption("--clientPassword")
+           request.config.getoption("--clientPassword"), \
+
 
 
 @pytest.fixture(scope="function")
