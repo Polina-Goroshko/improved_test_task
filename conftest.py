@@ -25,7 +25,6 @@ def parser_of_command_line(request):
            request.config.getoption("--clientPassword"), \
 
 
-
 @pytest.fixture(scope="function")
 def dir_on_server_creation():
     log.info("I am in dir_on_server_creation")
