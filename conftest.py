@@ -2,7 +2,7 @@ import os
 import paramiko
 import pytest
 import subprocess
-import time
+from time import sleep
 
 from logger_creation import log
 
@@ -110,7 +110,7 @@ def mount_dir(session_with_client_creation, parser_of_command_line):
     log.info("I am in mount_dir")
     session_with_client_creation.exec_command(
         "echo %s | sudo -S mount %s:%s /home/$USER/dirForMount/" % (parser_of_command_line[3], server_ip, global_path))
-    time.sleep(0.5)
+    sleep(0.5)
 
 
 @pytest.fixture(scope="function")
